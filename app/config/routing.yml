@@ -1,0 +1,5 @@
+ahnen:
+    resource: "@AhnenBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
