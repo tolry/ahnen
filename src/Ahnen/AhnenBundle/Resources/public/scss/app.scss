@@ -1,0 +1,20 @@
+@import "settings";
+@import "foundation";
+@import "font-awesome";
+@import "mixins";
+@import "compass/css3/transform";
+@import "compass/css3/transition";
+
+
+body {
+    overflow-y: scroll;
+}
+
+meta.foundation-data-attribute-namespace { font-family: false; }
+
+.one-line {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+

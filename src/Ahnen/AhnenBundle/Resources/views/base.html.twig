@@ -1,0 +1,33 @@
+<!doctype html>
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<html class="no-js" lang="en" data-useragent="Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0)">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>{% block title %}Ahnen{% endblock %}</title>
+
+
+        <meta name="description" content="" />
+
+        <meta name="author" content="Tobias Olry <tobias.olry@gmail.com>" />
+
+        <link rel="stylesheet" href="{{ asset("bundles/ahnen/css/app.css") }}" />
+
+        <script src="{{ asset("bundles/ahnen/bower/foundation/js/vendor/modernizr.js") }}"></script>
+    </head>
+    <body>
+        {% block body %}{% endblock %}
+
+        <script src="{{ asset("bundles/ahnen/bower/jquery/dist/jquery.min.js") }}"></script>
+        <script src="{{ asset("bundles/ahnen/bower/foundation/js/foundation.min.js") }}"></script>
+        <script src="{{ asset("bundles/ahnen/js/app.js") }}"></script>
+        <script>
+            $(document).foundation();
+
+            var doc = document.documentElement;
+            doc.setAttribute('data-useragent', navigator.userAgent);
+        </script>
+    </body>
+</html>
+
+
