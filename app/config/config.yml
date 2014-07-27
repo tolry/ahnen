@@ -57,8 +57,9 @@ doctrine:
         # path:     "%database_path%"
 
     orm:
+        naming_strategy:             doctrine.orm.naming_strategy.underscore
         auto_generate_proxy_classes: "%kernel.debug%"
-        auto_mapping: true
+        auto_mapping:                true
 
 # Swiftmailer Configuration
 swiftmailer:
