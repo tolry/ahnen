@@ -14,6 +14,10 @@ use Doctrine\Common\Collections\ArrayCollection;
  */
 class Relationships
 {
+    const TYPE_CHILDREN    = 'children';
+    const TYPE_GODCHILDREN = 'godchildren';
+    const TYPE_MARRIAGE    = 'marriage';
+
     /**
      * @ORM\Id
      * @ORM\Column(type="integer")
@@ -27,6 +31,11 @@ class Relationships
     protected $type;
 
     /**
+     * @ORM\Column(type="json_array", nullable=true)
+     */
+    protected $additionalData;
+
+    /**
      * @ORM\ManyToOne(targetEntity="Person", inversedBy="relationshipsFrom")
      */
     protected $from;
@@ -38,5 +47,6 @@ class Relationships
 
     public function __construct()
     {
+        $this->additionalData = array();
     }
 }
