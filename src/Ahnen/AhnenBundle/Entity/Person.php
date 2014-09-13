@@ -50,18 +50,28 @@ class Person
     private $dateOfDeath;
 
     /**
-     * @ORM\OneToMany(targetEntity="Person", mappedBy="from")
+     * @ORM\OneToMany(targetEntity="Relationship", mappedBy="from")
      */
     protected $relationshipsFrom;
 
     /**
-     * @ORM\OneToMany(targetEntity="Person", mappedBy="to")
+     * @ORM\OneToMany(targetEntity="Relationship", mappedBy="to")
      */
     protected $relationshipsTo;
 
     public function __construct()
     {
-        $this->relationshopsFrom = new ArrayCollection();
-        $this->relationshopsTo   = new ArrayCollection();
+        $this->relationshipsFrom = new ArrayCollection();
+        $this->relationshipsTo   = new ArrayCollection();
+    }
+
+    public function getRelationshipsFrom()
+    {
+        return $this->relationshipsFrom;
+    }
+
+    public function getRelationshipsTo()
+    {
+        return $this->relationshipsTo;
     }
 }

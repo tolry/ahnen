@@ -12,7 +12,7 @@ use Doctrine\Common\Collections\ArrayCollection;
  * @ORM\Entity
  * @ORM\Table()
  */
-class Relationships
+class Relationship
 {
     const TYPE_CHILDREN    = 'children';
     const TYPE_GODCHILDREN = 'godchildren';
@@ -45,8 +45,32 @@ class Relationships
      */
     protected $to;
 
-    public function __construct()
+    public function __construct(Person $from, Person $to, $type)
     {
+        $this->from           = $from;
+        $this->to             = $to;
         $this->additionalData = array();
+
+        $this->setType($type);
+    }
+
+    public function setType($type)
+    {
+        $this->type = $type;
+    }
+
+    public function getFrom()
+    {
+        return $this->from;
+    }
+
+    public function getTo()
+    {
+        return $this->to;
+    }
+
+    public function getType()
+    {
+        return $this->type;
     }
 }
