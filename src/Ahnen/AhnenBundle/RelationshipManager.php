@@ -17,4 +17,19 @@ class RelationshipManager
         $parent->getRelationshipsFrom()->add($relationship);
         $child->getRelationshipsTo()->add($relationship);
     }
+
+    public function findChildren(Person $parent)
+    {
+        return $parent->getRelationshipsFrom()
+            ->filter(
+                function ($relationship) {
+                    return Relationship::TYPE_CHILDREN == $relationship->getType();
+                }
+            )
+            ->map(
+                function ($relationship) {
+                    return $relationship->getTo();
+                }
+            );
+    }
 }
