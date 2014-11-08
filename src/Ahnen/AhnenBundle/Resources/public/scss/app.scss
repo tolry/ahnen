@@ -12,6 +12,10 @@ body {
 
 meta.foundation-data-attribute-namespace { font-family: false; }
 
+#content {
+    margin-top: 1em;
+}
+
 .one-line {
     overflow: hidden;
     text-overflow: ellipsis;
