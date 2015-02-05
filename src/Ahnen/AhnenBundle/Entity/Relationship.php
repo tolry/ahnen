@@ -18,6 +18,12 @@ class Relationship
     const TYPE_GODCHILDREN = 'godchildren';
     const TYPE_MARRIAGE    = 'marriage';
 
+    private static $allowedTypes = [
+        self::TYPE_CHILDREN,
+        self::TYPE_GODCHILDREN,
+        self::TYPE_MARRIAGE,
+    ];
+
     /**
      * @ORM\Id
      * @ORM\Column(type="integer")
@@ -56,6 +62,14 @@ class Relationship
 
     public function setType($type)
     {
+        // @todo use beberlei/assertion?
+        if (! in_array($type, self::$allowedTypes)) {
+            throw new \InvalidArgumentException(
+                'unknown type "' . $type . '", ' .
+                'allowed types: ' . implode(', ', self::$allowedTypes)
+            );
+        }
+
         $this->type = $type;
     }
 
