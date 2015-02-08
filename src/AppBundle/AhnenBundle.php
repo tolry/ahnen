@@ -1,6 +1,6 @@
 <?php
 
-namespace Ahnen\AhnenBundle;
+namespace AppBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
