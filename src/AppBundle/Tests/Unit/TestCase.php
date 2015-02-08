@@ -3,10 +3,10 @@
  * @author Tobias Olry <tobias.olry@gmail.com>
  */
 
-namespace Ahnen\AhnenBundle\Tests\Unit;
+namespace AppBundle\Tests\Unit;
 
-use Ahnen\AhnenBundle\Entity\Person;
-use Ahnen\AhnenBundle\Entity\Relationship;
+use AppBundle\Entity\Person;
+use AppBundle\Entity\Relationship;
 
 class TestCase extends \PHPUnit_Framework_TestCase
 {
