@@ -6,11 +6,11 @@
 
     <!--
     <parameters>
-        <parameter key="ahnen.example.class">Ahnen\AhnenBundle\Example</parameter>
+        <parameter key="app.example.class">AppBundle\Example</parameter>
     </parameters>
 
     <services>
-        <service id="ahnen.example" class="%ahnen.example.class%">
+        <service id="app.example" class="%app.example.class%">
             <argument type="service" id="service_id" />
             <argument>plain_value</argument>
             <argument>%parameter_name%</argument>

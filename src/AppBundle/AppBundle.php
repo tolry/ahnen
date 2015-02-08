@@ -4,6 +4,6 @@ namespace AppBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-class AhnenBundle extends Bundle
+class AppBundle extends Bundle
 {
 }
