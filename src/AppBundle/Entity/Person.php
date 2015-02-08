@@ -3,7 +3,7 @@
  * @author Tobias Olry <tobias.olry@gmail.com>
  */
 
-namespace Ahnen\AhnenBundle\Entity;
+namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
